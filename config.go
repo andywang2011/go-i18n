@@ -8,7 +8,9 @@ import (
 
 // Config holds bundle directory and default language.
 type Config struct {
-	Dir         string
+	// Dir is the filesystem path containing locale JSON/YAML files.
+	Dir string
+	// DefaultLang is the BCP 47 tag used when no locale matches (e.g. "en").
 	DefaultLang string
 }
 

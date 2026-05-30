@@ -2,4 +2,4 @@
 
 ## Unreleased
 
-- Initial extract from demo-api/pkg/i18n as standalone module.
+- OSS scaffold and documentation updates.

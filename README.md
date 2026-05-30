@@ -86,6 +86,25 @@ i18n:
 
 Wire injects: `LoadI18nConfig()` → `NewI18nEngine(cfg)` → `*i18n.Engine`.
 
+## Examples
+
+Runnable example (creates temp message files, prints `zh` / `en` / fallback):
+
+```bash
+cd examples/basic
+go run .
+```
+
+Expected output:
+
+```text
+[zh] 你好
+[en] Hello
+[fr] Hello
+```
+
+(`fr` falls back to `DefaultLang: en`.)
+
 ## API
 
 | Method | Description |

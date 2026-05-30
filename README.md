@@ -91,7 +91,7 @@ Wire injects: `LoadI18nConfig()` → `NewI18nEngine(cfg)` → `*i18n.Engine`.
 Runnable example (creates temp message files, prints `zh` / `en` / fallback):
 
 ```bash
-cd examples/basic
+cd examples
 go run .
 ```
 

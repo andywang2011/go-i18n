@@ -10,7 +10,7 @@ import (
 
 func TestNewEngine(t *testing.T) {
 	dir := t.TempDir()
-	content := `[{"id":"test.key","translation":"测试"}]`
+	content := `[{"id":"test.key","translation":"test value"}]`
 	if err := os.WriteFile(filepath.Join(dir, "zh.json"), []byte(content), 0644); err != nil {
 		t.Fatal(err)
 	}
@@ -28,7 +28,7 @@ func TestNewEngine(t *testing.T) {
 		t.Fatal("NewLocalizer returned nil")
 	}
 	msg, err := loc.Localize(&goi18n.LocalizeConfig{MessageID: "test.key"})
-	if err != nil || msg != "测试" {
+	if err != nil || msg != "test value" {
 		t.Errorf("Localize = %q, err = %v", msg, err)
 	}
 }

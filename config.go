@@ -22,6 +22,9 @@ func DefaultConfig() Config {
 	}
 }
 
+// ConfigDefault is an alias for DefaultConfig (naming consistency across go-* libs).
+func ConfigDefault() Config { return DefaultConfig() }
+
 // Validate checks that Dir exists and is a directory.
 func (c Config) Validate() error {
 	if c.Dir == "" {
